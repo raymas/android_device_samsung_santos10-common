@@ -22,14 +22,16 @@ set -e
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-CM_ROOT="$MY_DIR"/../../..
+ANDROID_ROOT="${MY_DIR}/../../.."
 
-HELPER="$CM_ROOT"/vendor/cm/build/tools/extract_utils.sh
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
 fi
-. "$HELPER"
+source "$HELPER"
+
+CLEAN_VENDOR=false
 
 if [ $# -eq 0 ]; then
     SRC=adb
@@ -47,14 +49,18 @@ else
     fi
 fi
 
+echo "Setup common"
 # Initialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
+setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
 
+echo "proprietary-files-common"
 extract "$MY_DIR"/proprietary-files-common.txt "$SRC"
 
+echo "Setup wifi"
 # Reinitialize the helper for device
-setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
+echo "Setup wifi"
 extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC"
 
 "$MY_DIR"/setup-makefiles.sh
