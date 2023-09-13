@@ -6,8 +6,8 @@ vendor/lib/libIMGegl.so
 vendor/lib/liboclcompiler.so
 vendor/lib/libpvrANDROID_WSEGL.so
 vendor/lib/libPVROCL.so
--vendor/lib/libsrv_init.so
--vendor/lib/libsrv_um.so
+vendor/lib/libsrv_init.so
+vendor/lib/libsrv_um.so
 vendor/lib/libusc.so
 vendor/lib/egl/libEGL_POWERVR_SGX544_115.so
 vendor/lib/egl/libGLESv1_CM_POWERVR_SGX544_115.so
@@ -20,7 +20,7 @@ vendor/lib/hw/gralloc.clovertrail.so
 vendor/lib/hw/memtrack.clovertrail.so
 
 # hwcomposer
--lib/libmultidisplay.so:vendor/lib/libmultidisplay.so
+lib/libmultidisplay.so:vendor/lib/libmultidisplay.so
 lib/libsepdrm.so:vendor/lib/libsepdrm.so
 
 # Video
