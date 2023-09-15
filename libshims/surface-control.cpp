@@ -23,15 +23,15 @@ namespace android {
 
 // ---------------------------------------------------------------------------
 
-extern "C" {
+// extern "C" {
 
-    /* status_t SurfaceControl::setLayer */
-    status_t _ZN7android14SurfaceControl8setLayerEj( uint32_t layer);
+//     /* status_t SurfaceControl::setLayer */
+//     status_t _ZN7android14SurfaceControl8setLayerEj( int32_t layer);
 
-    status_t _ZN7android14SurfaceControl8setLayerEi( int32_t layer) {
-		return _ZN7android14SurfaceControl8setLayerEj( (uint32_t)layer);
-	}
-}
+//     status_t _ZN7android14SurfaceControl8setLayerEi( int32_t layer) {
+// 		return _ZN7android14SurfaceControl8setLayerEj( (int32_t)layer);
+// 	}
+// }
 
 // ---------------------------------------------------------------------------
 

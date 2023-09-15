@@ -8,14 +8,14 @@ on init
 
     chmod 0660 /sys/class/android_usb/android0/f_rndis/ethaddr
     
-    write /sys/class/android_usb/android0/iSerial $ro.serialno
+    write /sys/class/android_usb/android0/iSerial ${ro.serialno}
     write /sys/class/android_usb/android0/f_rndis/manufacturer Samsung
     write /sys/class/android_usb/android0/f_rndis/vendorID 04e8
     write /sys/class/android_usb/android0/f_rndis/wceis 1
 
 on boot
-    write /sys/class/android_usb/android0/iManufacturer $ro.product.manufacturer
-    write /sys/class/android_usb/android0/iProduct $ro.product.model
+    write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
     
 # adb only USB configuration
 # This should only be used for debugging
@@ -38,7 +38,7 @@ on property:sys.usb.config=charging
     write /sys/class/android_usb/android0/functions adb
     write /sys/bus/pci/devices/0000:00:02.3/sdis 0
     write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state $sys.usb.config
+    setprop sys.usb.state ${sys.usb.config}
 
 # USB MTP configuration
 on property:sys.usb.config=mtp

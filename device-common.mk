@@ -21,13 +21,10 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_CONFIG := large
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
-# Houdini
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.dalvik.vm.native.bridge=libhoudini.so
-
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.dalvik.vm.isa.arm=x86 \
-    ro.enable.native.bridge.exec=1
+    ro.enable.native.bridge.exec=1 \
+    ro.dalvik.vm.native.bridge=libhoudini.so
 
 # Filesystem
 PRODUCT_PROPERTY_OVERRIDES += \

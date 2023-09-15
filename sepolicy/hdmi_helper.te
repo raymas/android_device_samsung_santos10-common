@@ -1,6 +1,6 @@
 # hdmi_helper
 type hdmi_helper, domain;
-type hdmi_helper_exec, exec_type, file_type;
+type hdmi_helper_exec, exec_type, file_type, system_file_type;
 init_daemon_domain(hdmi_helper)
 
 allow hdmi_helper display_service:service_manager find;

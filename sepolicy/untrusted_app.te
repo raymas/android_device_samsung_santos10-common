@@ -1,1 +1,1 @@
-allow untrusted_app system_file:file execmod;
+# allow untrusted_app system_file:file execmod;

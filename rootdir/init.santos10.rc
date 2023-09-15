@@ -107,8 +107,8 @@ on post-fs-data
     # Bluetooth
     setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
     chmod 0660 /sys/class/rfkill/rfkill0/state
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/state
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
 
     # GPS
     chmod 0664 /sys/devices/pci0000:00/0000:00:05.1/power/control

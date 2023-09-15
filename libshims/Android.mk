@@ -43,7 +43,7 @@ LOCAL_SRC_FILES := \
     gui/SensorManager.cpp \
     crypto.c
 
-LOCAL_SHARED_LIBRARIES := liblog libcutils libgui libbinder libutils
+LOCAL_SHARED_LIBRARIES := liblog libcutils libgui libbinder libutils libsensor
 LOCAL_MODULE := libshim_gps
 LOCAL_MODULE_TAGS := optional
 
@@ -60,7 +60,7 @@ LOCAL_SRC_FILES := \
     ui/GraphicBufferMapper.cpp \
     surface-control.cpp
 
-LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware libui libgui libbinder libutils libsync
+LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware libui libgui libbinder libutils libsync libsensor
 LOCAL_MODULE := libshim_camera
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 

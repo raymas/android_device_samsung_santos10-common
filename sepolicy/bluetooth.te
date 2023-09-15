@@ -1,1 +1,1 @@
-allow bluetooth system_file:file execmod;
+# allow bluetooth system_file:file execmod;

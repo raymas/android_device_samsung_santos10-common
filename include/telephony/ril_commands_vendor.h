@@ -14,65 +14,40 @@
 ** See the License for the specific language governing permissions and
 ** limitations under the License.
 */
-    {SAMSUNG_REQUEST_BASE, NULL, NULL},
-    // RIL_REQUEST_SET_CELL_BROADCAST_CONFIG - not used in stock RIL.java
-    {RIL_REQUEST_GET_CELL_BROADCAST_CONFIG, dispatchVoid, responseVoid},
-    // RIL_REQUEST_CRFM_LINE_SMS_COUNT_MSG - not used in stock RIL.java
-    // RIL_REQUEST_CRFM_LINE_SMS_READ_MSG - not used in stock RIL.java
-    {RIL_REQUEST_SEND_ENCODED_USSD, dispatchVoid, responseVoid},
-    {RIL_REQUEST_SET_PDA_MEMORY_STATUS, dispatchVoid, responseVoid},
-    {RIL_REQUEST_GET_PHONEBOOK_STORAGE_INFO, dispatchVoid, responseVoid},
-    {RIL_REQUEST_GET_PHONEBOOK_ENTRY, dispatchVoid, responseVoid},
-    {RIL_REQUEST_ACCESS_PHONEBOOK_ENTRY, dispatchVoid, responseVoid},
-    {RIL_REQUEST_DIAL_VIDEO_CALL, dispatchVoid, responseVoid},
-    {RIL_REQUEST_CALL_DEFLECTION, dispatchVoid, responseVoid},
-    // RIL_REQUEST_READ_SMS_FROM_SIM - not used in stock RIL.java
-    {RIL_REQUEST_USIM_PB_CAPA, dispatchVoid, responseVoid},
-    {RIL_REQUEST_LOCK_INFO, dispatchVoid, responseVoid},
-    // RIL_REQUEST_SEND_MOBILE_TRACKER_SMS - not used in stock RIL.java
-    {RIL_REQUEST_DIAL_EMERGENCY_CALL, dispatchVoid, responseVoid},
-    // RIL_REQUEST_GET_STOREAD_MSG_COUNT - not used in stock RIL.java
-    {RIL_REQUEST_STK_SIM_INIT_EVENT, dispatchVoid, responseVoid},
-    {RIL_REQUEST_GET_LINE_ID, dispatchVoid, responseVoid},
-    {RIL_REQUEST_SET_LINE_ID, dispatchVoid, responseVoid},
-    {RIL_REQUEST_GET_SERIAL_NUMBER, dispatchVoid, responseVoid},
-    {RIL_REQUEST_GET_MANUFACTURE_DATE_NUMBER, dispatchVoid, responseVoid},
-    {RIL_REQUEST_GET_BARCODE_NUMBER, dispatchVoid, responseVoid},
-    {RIL_REQUEST_UICC_GBA_AUTHENTICATE_BOOTSTRAP, dispatchVoid, responseVoid},
-    {RIL_REQUEST_UICC_GBA_AUTHENTICATE_NAF, dispatchVoid, responseVoid},
-    // RIL_REQUEST_SIM_TRANSMIT_BASIC - not used in stock RIL.java
-    // RIL_REQUEST_SIM_OPEN_CHANNEL - not used in stock RIL.java
-    // RIL_REQUEST_SIM_CLOSE_CHANNEL - not used in stock RIL.java
-    // RIL_REQUEST_SIM_TRANSMIT_CHANNEL - not used in stock RIL.java
-    // RIL_REQUEST_SIM_AUTH - not used in stock RIL.java
-    {RIL_REQUEST_MODIFY_CALL_INITIATE, dispatchVoid, responseVoid},
-    {RIL_REQUEST_MODIFY_CALL_CONFIRM, dispatchVoid, responseVoid},
-    {RIL_REQUEST_SAFE_MODE, dispatchVoid, responseVoid},
-    {RIL_REQUEST_SET_VOICE_DOMAIN_PREF, dispatchVoid, responseVoid},
-    {RIL_REQUEST_PS_ATTACH, dispatchVoid, responseVoid},
-    {RIL_REQUEST_PS_DETACH, dispatchVoid, responseVoid},
-    {RIL_REQUEST_ACTIVATE_DATA_CALL, dispatchVoid, responseVoid},
-    {RIL_REQUEST_CHANGE_SIM_PERSO, dispatchVoid, responseVoid},
-    {RIL_REQUEST_ENTER_SIM_PERSO, dispatchVoid, responseVoid},
-    {RIL_REQUEST_GET_TIME_INFO, dispatchVoid, responseVoid},
-    {RIL_REQUEST_CDMA_SEND_SMS_EXPECT_MORE, dispatchVoid, responseVoid},
-    {RIL_REQUEST_OMADM_SETUP_SESSION, dispatchVoid, responseVoid},
-    {RIL_REQUEST_OMADM_SERVER_START_SESSION, dispatchVoid, responseVoid},
-    {RIL_REQUEST_OMADM_CLIENT_START_SESSION, dispatchVoid, responseVoid},
-    {RIL_REQUEST_OMADM_SEND_DATA, dispatchVoid, responseVoid},
-    {RIL_REQUEST_CDMA_GET_DATAPROFILE, dispatchVoid, responseVoid},
-    {RIL_REQUEST_CDMA_SET_DATAPROFILE, dispatchVoid, responseVoid},
-    {RIL_REQUEST_CDMA_GET_SYSTEMPROPERTIES, dispatchVoid, responseVoid},
-    {RIL_REQUEST_CDMA_SET_SYSTEMPROPERTIES, dispatchVoid, responseVoid},
-    {RIL_REQUEST_SEND_SMS_COUNT, dispatchVoid, responseVoid},
-    {RIL_REQUEST_SEND_SMS_MSG, dispatchVoid, responseVoid},
-    {RIL_REQUEST_SEND_SMS_MSG_READ_STATUS, dispatchVoid, responseVoid},
-    {RIL_REQUEST_MODEM_HANGUP, dispatchVoid, responseVoid},
-    {RIL_REQUEST_SET_SIM_POWER, dispatchVoid, responseVoid},
-    {RIL_REQUEST_SET_PREFERRED_NETWORK_LIST, dispatchVoid, responseVoid},
-    {RIL_REQUEST_GET_PREFERRED_NETWORK_LIST, dispatchVoid, responseVoid},
-    {RIL_REQUEST_HANGUP_VT, dispatchVoid, responseVoid},
-    {RIL_REQUEST_HOLD, dispatchVoid, responseVoid},
-    {RIL_REQUEST_SET_LTE_BAND_MODE, dispatchVoid, responseVoid},
-    {RIL_REQUEST_QUERY_LOCK_NETWORKS, dispatchVoid, responseVoid},
-    {RIL_REQUEST_DISCON_DUN, dispatchVoid, responseVoid},
+    {RIL_OEM_REQUEST_BASE, NULL},
+    {RIL_REQUEST_DIAL_EMERGENCY_CALL, NULL}, // 10001
+    {RIL_REQUEST_CALL_DEFLECTION, NULL}, // 10002
+    {RIL_REQUEST_MODIFY_CALL_INITIATE, NULL}, // 10003
+    {RIL_REQUEST_SET_IMS_CALL_LIST, NULL}, // 10004
+    {RIL_REQUEST_SET_VOICE_DOMAIN_PREF, NULL}, // 10005
+    {RIL_REQUEST_SAFE_MODE, NULL}, // 10006
+    {RIL_REQUEST_SET_TRANSMIT_POWER, NULL}, // 10007
+    {RIL_REQUEST_GET_CELL_BROADCAST_CONFIG, NULL}, // 10008
+    {RIL_REQUEST_GET_PHONEBOOK_STORAGE_INFO, NULL}, // 10009
+    {RIL_REQUEST_GET_PHONEBOOK_ENTRY, NULL}, // 10010
+    {RIL_REQUEST_ACCESS_PHONEBOOK_ENTRY, NULL}, // 10011
+    {RIL_REQUEST_USIM_PB_CAPA, NULL}, // 10012
+    {RIL_REQUEST_LOCK_INFO, NULL}, // 10013
+    {RIL_REQUEST_STK_SIM_INIT_EVENT, NULL}, // 10014
+    {RIL_REQUEST_SET_PREFERRED_NETWORK_LIST, NULL}, // 10015
+    {RIL_REQUEST_GET_PREFERRED_NETWORK_LIST, NULL}, // 10016
+    {RIL_REQUEST_CHANGE_SIM_PERSO, NULL}, // 10017
+    {RIL_REQUEST_ENTER_SIM_PERSO, NULL}, // 10018
+    {RIL_REQUEST_SEND_ENCODED_USSD, NULL}, // 10019
+    {RIL_REQUEST_CDMA_SEND_SMS_EXPECT_MORE, NULL}, // 10020
+    {10021, NULL},
+    {RIL_REQUEST_HOLD, NULL}, // 10022
+    {RIL_REQUEST_SET_SIM_POWER, NULL}, // 10023
+    {RIL_REQUEST_GET_ACB_INFO, NULL}, // 11024
+    {RIL_REQUEST_UICC_GBA_AUTHENTICATE_BOOTSTRAP, NULL}, // 10025
+    {RIL_REQUEST_UICC_GBA_AUTHENTICATE_NAF, NULL}, // 10026
+    {RIL_REQUEST_GET_INCOMING_COMMUNICATION_BARRING, NULL}, // 10027
+    {RIL_REQUEST_SET_INCOMING_COMMUNICATION_BARRING, NULL}, // 10028
+    {RIL_REQUEST_QUERY_CNAP, NULL}, // 10029
+    {RIL_REQUEST_SET_TRANSFER_CALL, NULL}, // 10030
+    {RIL_REQUEST_GET_DISABLE_2G, NULL}, // 11031
+    {RIL_REQUEST_SET_DISABLE_2G, NULL}, // 11032
+    {RIL_REQUEST_REFRESH_NITZ_TIME, NULL}, // 11033
+    {RIL_REQUEST_ENABLE_UNSOL_RESPONSE, NULL}, // 11034
+    {RIL_REQUEST_CANCEL_TRANSFER_CALL, NULL}, // 11035
+    {RIL_REQUEST_SIM_OPEN_CHANNEL_WITH_P2, NULL}, // 11036

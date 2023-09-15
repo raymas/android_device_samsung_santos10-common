@@ -19,6 +19,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <sys/types.h>
+#include <cutils/atomic.h>
 
 #include <utils/Errors.h>
 #include <utils/Log.h>
