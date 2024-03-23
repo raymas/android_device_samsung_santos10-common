@@ -1,4 +1,4 @@
-TWRP_VERSION := $(shell cat bootable/recovery/variables.h | grep TW_VERSION_STR | cut -d\" -f2)
+TWRP_VERSION := $(shell cat bootable/recovery/variables.h | grep TW_MAIN_VERSION_STR | head -1 | cut -d\" -f2)
 TWRP_NAME := twrp-$(TWRP_VERSION)-$(TARGET_DEVICE)
 
 $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) \
